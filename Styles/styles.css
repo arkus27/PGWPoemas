@@ -1,0 +1,132 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #333;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el logo a la izquierda */
+  margin-bottom: 20px; /* Agregado para separar el logo del título */
+}
+
+.logo {
+  border-radius: 50%;
+  width: 100px; /* Aumenta el tamaño del logo */
+  height: 100px; /* Aumenta el tamaño del logo */
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Agrega espacio entre el título y las secciones */
+}
+
+.title {
+  margin: 0; /* Elimina el margen superior e inferior */
+  font-size: 24px; /* Aumenta el tamaño del título */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+nav ul li {
+  margin-right: 20px; /* Aumenta el espacio entre elementos */
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: 18px; /* Aumenta el tamaño del texto */
+}
+
+nav ul li a:hover {
+  color: #00ff00;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para computadora */
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 120px; /* Aumenta el tamaño del logo en computadoras */
+    height: 120px; /* Aumenta el tamaño del logo en computadoras */
+  }
+
+  .title {
+    font-size: 32px; /* Aumenta el tamaño del título en computadoras */
+  }
+
+  nav ul li a {
+    font-size: 20px; /* Aumenta el tamaño del texto del menú en computadoras */
+  }
+
+  main {
+    padding: 40px; /* Aumenta el espacio alrededor del contenido en computadoras */
+  }
+
+  footer {
+    font-size: 12px; /* Reducción del tamaño del texto del footer en computadoras */
+  }
+}
+
+/* Estilos para celular y tablet */
+@media only screen and (max-width: 767px) {
+  .logo {
+    width: 80px; /* Reducción del tamaño del logo en celular y tablet */
+    height: 80px; /* Reducción del tamaño del logo en celular y tablet */
+  }
+
+  .title {
+    font-size: 24px; /* Reducción del tamaño del título en celular y tablet */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Reducción del tamaño del texto del menú en celular y tablet */
+  }
+
+  main {
+    padding: 20px; /* Ajuste del espacio alrededor del contenido en celular y tablet */
+  }
+
+  footer {
+    font-size: 8px; /* Reducción del tamaño del texto del footer en celular y tablet */
+  }
+}

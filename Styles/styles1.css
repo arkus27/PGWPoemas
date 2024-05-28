@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("/images/Estrella.jpg") no-repeat center center fixed; /* Imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  color: black; /* Texto en color negro */
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+}
+
+h1 {
+  font-size: 5rem;
+  background: linear-gradient(
+    to right,
+    #004aad 20%,
+    #38b6ff 40%,
+    #38b6ff 60%,
+    #004aad 80%
+  );
+  background-size: 200%;
+  color: transparent;
+  background-clip: text;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el logo a la izquierda */
+  margin-bottom: 20px; /* Agregado para separar el logo del título */
+}
+
+.logo {
+  border-radius: 50%;
+  width: 100px; /* Aumenta el tamaño del logo */
+  height: 100px; /* Aumenta el tamaño del logo */
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Agrega espacio entre el título y las secciones */
+}
+
+.title {
+  margin: 0; /* Elimina el margen superior e inferior */
+  font-size: 24px; /* Aumenta el tamaño del título */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+}
+
+nav ul li {
+  margin-right: 20px; /* Aumenta el espacio entre elementos */
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  position: relative;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #333; /* Cambia el color del texto de los enlaces */
+  text-decoration: none;
+  padding: 6px 20px;
+  transition: 0.5s;
+  box-shadow: 10px 10px 20px;
+}
+
+nav ul li a:hover {
+  color: rgb(31, 247, 247); /* Color de enlace al pasar el mouse */
+}
+
+nav ul li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-bottom: 2px solid #bef;
+  border-radius: 15px;
+  transform: scale(0) translateY(50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.Navbar {
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para computadora */
+@media only screen and (min-width: 768px) {
+  .logo {
+    width: 120px; /* Aumenta el tamaño del logo en computadoras */
+    height: 120px; /* Aumenta el tamaño del logo en computadoras */
+  }
+
+  .title {
+    font-size: 32px; /* Aumenta el tamaño del título en computadoras */
+  }
+
+  nav ul li a {
+    font-size: 20px; /* Aumenta el tamaño del texto del menú en computadoras */
+  }
+
+  main {
+    padding: 40px; /* Aumenta el espacio alrededor del contenido en computadoras */
+  }
+
+  footer {
+    font-size: 12px; /* Reducción del tamaño del texto del footer en computadoras */
+  }
+}
+
+/* Estilos para celular y tablet */
+@media only screen and (max-width: 767px) {
+  .logo {
+    width: 80px; /* Reducción del tamaño del logo en celular y tablet */
+    height: 80px; /* Reducción del tamaño del logo en celular y tablet */
+  }
+
+  .title {
+    font-size: 24px; /* Reducción del tamaño del título en celular y tablet */
+  }
+
+  nav ul li a {
+    font-size: 16px; /* Reducción del tamaño del texto del menú en celular y tablet */
+  }
+
+  main {
+    padding: 20px; /* Ajuste del espacio alrededor del contenido en celular y tablet */
+  }
+
+  footer {
+    font-size: 8px; /* Reducción del tamaño del texto del footer en celular y tablet */
+  }
+}
